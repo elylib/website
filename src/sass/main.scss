@@ -1,0 +1,56 @@
+//Import various parts of the site
+@import 'partials/homePage';
+@import 'partials/eJournals';
+
+//Styles across all guides
+//Header styles
+.hdr-wrapper {
+  margin:0 auto;
+  min-height: 100px;
+
+  h1 {
+	  font-size:2em;
+	  margin-top: 5px;
+	  padding-top: .7em;
+	}
+	.hdr-smallLogo {
+	  float: left;
+	  margin-right: .5em;
+	}
+	.hdr-largeLogo {
+	  display: none;
+	  margin: 0 auto;
+	}
+}
+
+.hdr-inner {
+  text-align: center;
+  margin-left: 73px;
+}
+//End header styles
+
+//Footer styles
+.ftr-wrapper {
+	min-height: 40px;
+	background: grey;
+	color:white;
+	width:100%;
+	font-weight:bold;
+	font-size:14px;
+	padding:.5em;
+	text-align:center;
+
+	a:link, a:visited {
+		color:white;
+	}
+}
+//End footer styles
+
+#s-lg-box-wrapper-8768556, #s-lg-box-wrapper-8768570, #s-lg-box-wrapper-8768263, #s-lg-box-wrapper-8768269, .pam-notElectronic {
+	display:none;
+}
+
+//Import the media-queried styles
+@import 'partials/small';
+@import 'partials/mid';
+@import 'partials/large';
