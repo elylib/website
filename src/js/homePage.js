@@ -28,7 +28,6 @@ if ( $( '.cal-wrapper' ).length ) {
     });
 }
 
-
 //Create functionality for search tabs
 var searchTypes = {
     all: { fq: '', qt: 'affiliate_wcl_all' },

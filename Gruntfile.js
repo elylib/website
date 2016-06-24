@@ -76,6 +76,9 @@ module.exports = function(grunt) {
     clean: {
       js: ['dist/js/**/*.js'],
       css: ['dist/css/**/*.js']
+    },
+    qunit: {
+      all: ['src/js/test/*.html']
     }
 
   });
@@ -87,7 +90,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
 
   grunt.registerTask('default', ['copy', 'sass', 'concat', 'jshint','uglify']);
+  grunt.registerTask('run-tests', ['qunit'])
 
 };
