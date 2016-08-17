@@ -93,6 +93,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
 
   grunt.registerTask('default', ['copy', 'sass', 'concat', 'jshint','uglify']);
-  grunt.registerTask('run-tests', ['qunit'])
+  grunt.registerTask('run-tests', ['qunit']);
 
 };
