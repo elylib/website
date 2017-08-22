@@ -15,7 +15,7 @@ if ( $( '.cal-wrapper' ).length ) {
             */
             var curStatus = data.locations[0].times.currently_open ? 'Open' : 'Closed';
             var todaysTimes = data.locations[0].rendered;
-            var weAreOpenToday = data.locations[0].times.status === 'open' || data.locations[0].times.status === '24hours' ? true : false;
+            var weAreOpenToday = data.locations[0].times.status === 'open' || data.locations[0].times.status === '24hours';
 
             $( '.cal-wrapper' ).show();
             $( '.cal-status' ).text(curStatus);
