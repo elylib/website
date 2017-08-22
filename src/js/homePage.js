@@ -28,6 +28,37 @@ if ( $( '.cal-wrapper' ).length ) {
     });
 }
 
+var formatParams = {
+    Books: {
+        formatInput: 'Book',
+        placeholderText: 'Find books...'
+    },
+    Articles: {
+        formatInput: 'Artchap',
+        placeholderText: 'Find Articles...'
+    },
+    Video: {
+        formatInput: 'Video',
+        placeholderText: 'Find Videos...'
+    },
+    Everything: {
+        formatInput: '',
+        placeholderText: 'Find books, videos, music, and more....'
+    }
+};
+
+jQuery('.tab-links a').on('click', function(e)  {
+    e.preventDefault();
+    var currentAttrValue = jQuery(this).text();
+    // Show/Hide Tabs
+    jQuery('#formatInput').val(formatParams[currentAttrValue].formatInput);
+    jQuery('#whatAreWeSearchingFor').text(currentAttrValue);
+    jQuery('#query').attr('placeholder', formatParams[currentAttrValue].placeholderText).focus();
+    // Change/remove current tab to active
+    $('.tab-links a.selected').removeClass('selected');
+    $(this).addClass('selected');
+});
+
 //Create functionality for search tabs
 var searchTypes = {
     all: { fq: '', qt: 'affiliate_wcl_all' },

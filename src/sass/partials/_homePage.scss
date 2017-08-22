@@ -1,4 +1,5 @@
 //WorldCat Local Search box styles
+//These are being deprecated
 .qsb-form {
     width: 65%;
     min-width: 250px;
@@ -58,6 +59,94 @@
 	    margin: 0 auto;
 	    margin-bottom: 1em;
 	}
+}
+
+//Discovery Migration
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+//Tabs
+#search-wrapper {
+    position:relative;
+    letter-spacing: 0.02rem;
+    font-family: "Source Sans Pro","Myriad Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//Tab links
+// Clearfix
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links {
+    text-align:center;
+}
+
+.tab-links a {
+    padding:9px 15px;
+    display:inline-block;
+    font-size:16px;
+    font-weight:600;
+    transition:all linear 0.15s;
+    text-decoration:none;
+    color: rgb(0, 0, 0);
+}
+
+.tab-links a.selected h4 {
+   color: rgb(0,160,223);
+}
+
+.tab-label {
+    color: #000000;
+}
+
+input.searchbox {
+    height: 40px;
+    width: 100%;
+    padding-left: .6rem;
+    font-size: 1.2rem;
+    border: 2px solid rgb(0,105,170);
+}
+
+input.headersubmit {
+    border:0;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(0,105,170);
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-family: 'FontAwesome', sans-serif;
+    cursor: pointer;
+}
+
+select.custom-dropdown-menu {
+    background: transparent;
+    padding: 5px;
+    font-size: 14px;
+    border: 2px solid rgb(0,105,170);
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#advanced-search {
+    line-height: 0;
+    margin-top: 20px;
+    font-size: .8em;
+    text-decoration: none;
+    color: rgb(0,105,170);
 }
 //End searchbox styles
 
