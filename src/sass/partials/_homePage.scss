@@ -148,6 +148,11 @@ select.custom-dropdown-menu {
     text-decoration: none;
     color: rgb(0,105,170);
 }
+
+#qsb-links {
+    font-size: 1.3em;
+}
+
 //End searchbox styles
 
 #qsb-links, .cal-wrapper, #s-lg-content-14464848, #s-lg-content-14517546 {
@@ -196,6 +201,12 @@ select.custom-dropdown-menu {
     }
     p a:link, p a:visited {
     	color:white;
+    }
+    .social-icons {
+        margin: .5em 0 .5em 1.7em;
+        i {
+            margin-right:.5em;
+        }
     }
 }
 
