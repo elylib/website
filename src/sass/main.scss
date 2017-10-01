@@ -31,10 +31,10 @@
 
 //Footer styles
 .ftr-wrapper {
-	min-height: 40px;
+        min-height: 40px;
+        margin: 0 auto;
 	background: grey;
 	color:white;
-	width:100%;
 	font-weight:bold;
 	font-size:14px;
 	padding:.5em;
@@ -46,8 +46,28 @@
 }
 //End footer styles
 
+//Chat Styles
+#lcs_slide_out-9020 {
+    right: 0;
+    font-size: 1.2em;
+    left: auto;
+}
+
+.lcs_slide_out-b header a {
+    right: 10%;
+    left: auto!important;
+}
+
+.lcs_slide_out-b.open header a {
+    top: -50px;
+}
+//End Chat Styles
 #s-lg-box-wrapper-8768556, #s-lg-box-wrapper-8768570, #s-lg-box-wrapper-8768263, #s-lg-box-wrapper-8768269, .pam-notElectronic {
 	display:none;
+}
+
+#contacts-table td {
+    padding: 10px;
 }
 
 //Import the media-queried styles

@@ -1,14 +1,17 @@
 @media screen and (min-width:768px) {
     .hdr-wrapper {
-   		h1 {
-    	font-size: 36px;
+        h1 {
+            font-size: 36px;
+        }
+        img.hdr-largeLogo {
+            display:block;
+        }
+        img.hdr-smallLogo,  .hdr-inner {
+            display:none;
     	}
+    }
 
-	    img.hdr-largeLogo {
-	        display:block;
-	    }
-	    img.hdr-smallLogo,  .hdr-inner {
-	        display:none;
-    	}
-	}
+    .ftr-wrapper {
+	width: 750px;
+    }
 }

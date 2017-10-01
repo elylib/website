@@ -32,19 +32,21 @@ $( '.cmn-wrapper a:not(.cmn-label)' ).on( 'click', function trackContextSelect()
 });
 
 //Track how many times somebody uses one of the QuickSearch tabs
-$( '.qsb-searchTabs a' ).on( 'click', function trackQuickSearchTabs() {
+$( '.tab-links a' ).on( 'click', function trackQuickSearchTabs() {
     var whichTab = $( this ).text();
     ga( 'send', 'event', 'QuickSearch Box', 'Tab', whichTab );
 });
 
 //Track QuickSearch searches and what the search term is.
 //Can compare with tabs to see if percentage of limited searches
-$( '#wcfw' ).on( 'submit', function trackQuickSearchTerms() {
-    var searchTerm = $( '#q' ).val();
+$( '#search-box-form' ).on( 'submit', function trackQuickSearchTerms() {
+    var searchTerm = $( '#query' ).val();
+    var selectedTab = $( '.tab-links a.selected' ).text();
     ga( 'send', 'event', 'QuickSearch Box', 'Search', searchTerm );
+    ga( 'send', 'event', 'QuickSearch Box', 'Search w/ tab', selectedTab + ' ; ' + searchTerm);
 });
 
-$( '#scope' ).on( 'change', function trackQuickSearchScope() {
+$( '#searchLibrary' ).on( 'change', function trackQuickSearchScope() {
     var changedTo = $( '#scope option:selected' ).text();
     ga( 'send', 'event', 'QuickSearch Box', 'Scope Change', changedTo );
 });

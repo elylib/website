@@ -59,6 +59,19 @@ jQuery('.tab-links a').on('click', function(e)  {
     $(this).addClass('selected');
 });
 
+$('#search-box-form').on('submit', function(e) {
+    var query = $('#query');
+    var chosen = $('#searchLibrary');
+    var ercFilter = '((b8:Education Resources Collection) OR (b8:Education Resources Tests) OR (b8:Education Resources Reference))';
+    if (chosen.val() === 'erc') {
+        if (query.val().indexOf(ercFilter) === -1) {
+            chosen.val('wz:5504');
+            query.val(query.val() + ' ' + ercFilter );
+        }
+    }
+});
+
+//Deprecated
 //Create functionality for search tabs
 var searchTypes = {
     all: { fq: '', qt: 'affiliate_wcl_all' },
