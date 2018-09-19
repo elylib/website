@@ -285,7 +285,7 @@ $(document).ready(function () {/*
                 $('.pam-navigatedHere').hide();
 
                 $.ajax({
-                    url: 'http://legacy.lib.westfield.ma.edu/oclc_records/getRecord.php?' + oclcNum,
+                    url: 'https://legacy.lib.westfield.ma.edu/oclc_records/getRecord.php?' + oclcNum,
                     dataType: 'jsonp',
                     beforeSend: function () {
                         $('.pam-eJournalLoadSpin').show();
