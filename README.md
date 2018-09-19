@@ -2,7 +2,7 @@ Ely Library Web Files
 =====================
 Last edited 9-2-15
 ------------------
-If you don't know [*Grunt*](http://gruntjs.com) and don't want to learn *Grunt* (same goes for [*SASS*](http://sass-lang.com)), just get **main.css** and **concatted.js** from their respective **dist** directory and work from those. I use these tools, but don't want to make whoever you are dependent on them.
+If you don't know [*Grunt*](http://gruntjs.com) and don't want to learn *Grunt* (same goes for [*SASS*](http://sass-lang.com)), just get **main.css** and **libguidesCustom.js** from their respective **dist** directory and work from those. I use these tools, but don't want to make whoever you are dependent on them.
 
 These files control the customization of our *LibGuides* instance. The minified versions are uploaded into the Custom JS/CSS section of *LibGuides*. *LibGuides* already includes *jQuery*, so all of the *JavaScript* uses *jQuery* because why not, it's already there. Some of these files rely on *PHP* scripts to pull information from APIs. I have tried to note that when it is the case.  
 
