@@ -42,26 +42,6 @@ module.exports = function(grunt) {
         dest: 'dist/js/concatted.js'
       }
     },
-    sass: {
-      dist: {
-        files: {
-          'dist/css/main.min.css': 'src/sass/main.scss'
-        },
-        options: {
-          style: 'compressed',
-        }
-      },
-      dev: {
-        files: {
-          'dist/css/main.css': 'src/sass/main.scss'
-        },
-        options: {
-          trace: true,
-          style: 'expanded',
-          lineNumbers: true,
-        }
-      }
-    },
     copy: {
       main: {
         expand: true,
@@ -70,8 +50,8 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['src/sass/**/*.scss', 'src/js/**/*.js'],
-      tasks: ['jshint', 'sass']
+      files: ['src/js/**/*.js'],
+      tasks: ['jshint']
     },
     clean: {
       js: ['dist/js/**/*.js'],
@@ -87,12 +67,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-qunit');
 
-  grunt.registerTask('default', ['copy', 'sass', 'concat', 'jshint','uglify']);
+  grunt.registerTask('default', ['copy', 'concat', 'jshint','uglify']);
   grunt.registerTask('run-tests', ['qunit']);
 
 };
