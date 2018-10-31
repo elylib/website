@@ -42,7 +42,7 @@ jQuery(document).ready(function () {
             placeholderText: 'Find Videos...'
         },
         Everything: {
-            formatInput: '',
+            formatInput: 'all',
             placeholderText: 'Find books, videos, music, and more....'
         }
     };
@@ -63,11 +63,9 @@ jQuery(document).ready(function () {
         var query = jQuery('#query');
         var chosen = jQuery('#searchLibrary');
         var ercFilter = '((b8:Education Resources Collection) OR (b8:Education Resources Tests) OR (b8:Education Resources Reference))';
-        if (chosen.val() === 'erc') {
-            if (query.val().indexOf(ercFilter) === -1) {
-                chosen.val('wz:5504');
-                query.val(query.val() + ' ' + ercFilter);
-            }
+        if (chosen.val() === 'erc' && query.val().indexOf(ercFilter) === -1) {
+            chosen.val('wz:5504');
+            query.val(query.val() + ' ' + ercFilter);
         }
     });
 
@@ -123,8 +121,20 @@ jQuery(document).ready(function () {
             href: 'https://westfield-ma.libsurveys.com/poster',
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Fall_2016_-_Mike_and_Mailroom_staff.jpg',
             imgAlt: 'Mailroom staff pose with reading material.'
-        }
+        },
+        {
+            title: 'Buzz Hoagland Site',
+            href: 'https://lib.westfield.ma.edu/hoagland',
+            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/buzz.jpg',
+            imgAlt: 'Buzz Hoagland teaching at Westfield State University'
 
+        },
+        {
+            title: 'Recently Added Titles',
+            href: 'https://lib.westfield.ma.edu/newtitles',
+            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/new_titles2.jpg',
+            imgAlt: 'Recently Added Titles at Ely Library'
+        }
     ];
 
     if (jQuery('.newRandomBoxes').length) {
