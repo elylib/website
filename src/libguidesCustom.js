@@ -134,6 +134,12 @@ jQuery(document).ready(function () {
             href: 'https://lib.westfield.ma.edu/newtitles',
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/new_titles2.jpg',
             imgAlt: 'Recently Added Titles at Ely Library'
+        },
+        {
+            title: 'Coronavirus Online Resources',
+            href: 'https://news.nnlm.gov/gmr/2020/02/covid-19-coronavirus-for-public-libraries/',
+            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Covid-19-Online-Resources.png',
+            imgAlt: 'A Guide to COVID-19 (coronavirus disease 2019) for Public Libraries'
         }
     ];
 
