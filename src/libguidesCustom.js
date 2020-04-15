@@ -1,3 +1,6 @@
+//Set variable to control flow during COVID-19 pandemic
+var pandemicEffect = true;
+
 jQuery(document).ready(function () {
 //Homepage hours display
     if (jQuery('.cal-wrapper').length) {
@@ -111,12 +114,6 @@ jQuery(document).ready(function () {
             imgAlt: 'Female athletes lounge in a black and white photograph'
         },
         {
-            title: 'Group Study Rooms',
-            href: 'https://libcal.westfield.ma.edu/reserve/studyroom',
-            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/study_room_graphic_2.jpg',
-            imgAlt: 'The inside of a group study room with tables and chairs'
-        },
-        {
             title: 'Read Posters',
             href: 'https://westfield-ma.libsurveys.com/poster',
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Fall_2016_-_Mike_and_Mailroom_staff.jpg',
@@ -130,21 +127,26 @@ jQuery(document).ready(function () {
 
         },
         {
-            title: 'Recently Added Titles',
-            href: 'https://lib.westfield.ma.edu/newtitles',
-            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/new_titles2.jpg',
-            imgAlt: 'Recently Added Titles at Ely Library'
-        },
-        {
             title: 'Coronavirus Online Resources',
             href: 'https://news.nnlm.gov/gmr/2020/02/covid-19-coronavirus-for-public-libraries/',
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Covid-19-Online-Resources.png',
             imgAlt: 'A Guide to COVID-19 (coronavirus disease 2019) for Public Libraries'
+        },
+        {
+            title: 'COVID-19 Publishers Expanded Access',
+            href: 'https://lib.westfield.ma.edu/expandedaccessSP2020',
+            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/COVID-19_Publishers-Expanded-Access.png',
+            imgAlt: 'A Guide to resources publishers have made temporarily available.'
         }
     ];
 
     if (jQuery('.newRandomBoxes').length) {
-        var random1 = Math.floor(Math.random() * boxesAtBottomOfHomepage.length);
+        if (pandemicEffect) {
+            var random1 = 7;
+            }
+        else {
+            var random1 = Math.floor(Math.random() * boxesAtBottomOfHomepage.length);
+            }
         var random2 = Math.floor(Math.random() * boxesAtBottomOfHomepage.length);
         while (random1 === random2) {
             // Make sure we show two distinct images
