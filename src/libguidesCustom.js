@@ -1,5 +1,5 @@
 //Set variable to control flow during COVID-19 pandemic
-var pandemicEffect = true;
+var pandemicEffect = false;
 
 jQuery(document).ready(function () {
 //Homepage hours display
