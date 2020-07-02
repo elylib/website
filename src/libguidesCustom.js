@@ -132,12 +132,12 @@ jQuery(document).ready(function () {
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Covid-19-Online-Resources.png',
             imgAlt: 'A Guide to COVID-19 (coronavirus disease 2019) for Public Libraries'
         },
-        {
-            title: 'COVID-19 Publishers Expanded Access',
-            href: 'https://lib.westfield.ma.edu/expandedaccessSP2020',
-            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/COVID-19_Publishers-Expanded-Access.png',
-            imgAlt: 'A Guide to resources publishers have made temporarily available.'
-        }
+//        {
+//            title: 'COVID-19 Publishers Expanded Access',
+//            href: 'https://lib.westfield.ma.edu/expandedaccessSP2020',
+//            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/COVID-19_Publishers-Expanded-Access.png',
+//            imgAlt: 'A Guide to resources publishers have made temporarily available.'
+//        }
     ];
 
     if (jQuery('.newRandomBoxes').length) {
