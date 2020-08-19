@@ -314,3 +314,16 @@ select.custom-dropdown-menu {
         left: 10px;
     }
 }
+
+/* ALERT MESSAGE AT BOTTOM OF HOME PAGE */
+
+.myAlert-bottom{
+    position: fixed;
+    bottom: 5px;
+    left:2%;
+    width: 96%;
+}
+
+.alert{
+    display: none;
+}
