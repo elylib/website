@@ -158,11 +158,11 @@ select.custom-dropdown-menu {
     min-height: 150px;
 }
 
-.cal-wrapper, .cal-timeWrapper {
+.cal-wrapper, .cal-timeWrapper, .ref-timeWrapper {
     display: none;
 }
 
-.cal-status {
+.cal-status, .ref-status {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 16px;
@@ -173,7 +173,7 @@ select.custom-dropdown-menu {
     margin-top: 0;
 }
 
-.cal-openThroughClosed {
+.cal-openThroughClose, .ref-openThroughClose {
     font-weight: bold;
 }
 

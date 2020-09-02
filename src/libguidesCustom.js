@@ -19,15 +19,29 @@ jQuery(document).ready(function () {
             var elyLibraryHours = data.locations[0];
             var curStatus = elyLibraryHours.times.currently_open ? 'Open' : 'Closed';
             var weAreOpenToday = elyLibraryHours.times.status === 'open' || elyLibraryHours.times.status === '24hours';
+            var elyReferenceHours = data.locations[1];
+            var curRefStatus = elyReferenceHours.times.currently_open ? 'Available' : 'Offline';
+            var refIsOpenToday = elyReferenceHours.times.status === 'open' || elyReferenceHours.times.status === '24hours';
 
             jQuery('.cal-status').text(curStatus);
+            jQuery('.ref-status').text(curRefStatus);
             jQuery('.cal-wrapper').show();
 
-            if (weAreOpenToday) {
+            if ((weAreOpenToday) && (refIsOpenToday)) {
+                jQuery('.cal-openThroughClose').text(elyLibraryHours.rendered);
+                jQuery('.cal-timeWrapper').show();
+                jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
+                jQuery('.ref-timeWrapper').show();
+            }
+            else if (refIsOpenToday) {
+                jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
+                jQuery('.ref-timeWrapper').show();
+            }
+            else {
                 jQuery('.cal-openThroughClose').text(elyLibraryHours.rendered);
                 jQuery('.cal-timeWrapper').show();
             }
-        });
+            });
     }
 
 //QuickSearch Box
@@ -125,12 +139,6 @@ jQuery(document).ready(function () {
             imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/buzz.jpg',
             imgAlt: 'Buzz Hoagland teaching at Westfield State University'
 
-        },
-        {
-            title: 'Coronavirus Online Resources',
-            href: 'https://news.nnlm.gov/gmr/2020/02/covid-19-coronavirus-for-public-libraries/',
-            imgSrc: 'https://libapps.s3.amazonaws.com/customers/1692/images/Covid-19-Online-Resources.png',
-            imgAlt: 'A Guide to COVID-19 (coronavirus disease 2019) for Public Libraries'
         },
 //        {
 //            title: 'COVID-19 Publishers Expanded Access',
