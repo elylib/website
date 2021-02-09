@@ -31,7 +31,7 @@ jQuery(document).ready(function () {
                 jQuery('.cal-openThroughClose').text(elyLibraryHours.rendered);
                 jQuery('.cal-timeWrapper').show();
                 jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
-                jQuery('.ref-timeWrapper').show();
+                jQuery('.ref-timeWr"cmn-subMenuapper').show();
             }
             else if (refIsOpenToday) {
                 jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
@@ -270,3 +270,72 @@ jQuery(document).ready(function () {
         });
     }
 });
+
+//Search staff directory table by name (columns 1 and 2)
+function staffDirSearch() {
+  var input, filter, table, tr, firstCol, secondCol, thirdCol, i, txtValue;
+  input = document.getElementById("staffDirInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("staffDirTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    firstCol= tr[i].getElementsByTagName("td")[0];
+    secondCol = tr[i].getElementsByTagName("td")[1];
+    thirdCol = tr[i].getElementsByTagName("td")[2];
+    if (firstCol) {
+      txtValue = firstCol.textContent || firstCol.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else if (secondCol) {
+        txtValue = secondCol.textContent || secondCol.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else if (thirdCol) {
+        txtValue = thirdCol.textContent || thirdCol.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  }
+}
+
+//Toggle filter box on and off
+function toggleStaffDirFilter() {
+  var staffFilter = document.getElementById("staffDirFilter");
+  if (staffFilter.style.display === "none" || staffFilter.style.display === "") {
+    staffFilter.style.display = "inline-table";
+  } else {
+    staffFilter.style.display = "none";
+  }
+}
+
+//Filter list of frequently asked questions (FAQ)
+function faqFilter() {
+    var input, filter, container, row, a, i, txtValue;
+    input = document.getElementById("faqInput");
+    filter = input.value.toUpperCase();
+    container = document.getElementById("faqContainer");
+    row = container.getElementsByTagName("div");
+    for (i = 0; i < row.length; i++) {
+        match = row[i].getElementsByTagName("a");
+        if (match.length > 0){
+        a = row[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                row[i].style.display = "";
+            } else {
+                row[i].style.display = "none";
+            }
+        }
+        else if (filter.length == 0){
+            row[i].style.display = "";
+        }
+        else {
+            row[i].style.display = "none";
+        }
+    }
+}

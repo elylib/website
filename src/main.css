@@ -180,7 +180,22 @@ select.custom-dropdown-menu {
 /*
  * CONTEXT MENU ON LEFT OF HOMEPAGE STYLES
  */
-.cmn-subMenu {
+
+.cmn-wrapper {
+    padding-left: 1em;
+}
+
+.cmn-wrapper {
+    padding: 2em 0 0 1em;
+}
+.cmn-wrapper .contact-icons {
+    margin: .5em 0 .5em .9em;
+}
+.cmn-wrapper .contact-icons i {
+    margin-right: .5em;
+}
+
+p.cmn-subMenu {
     width: 124px;
     height: 25px;
     background: grey;
@@ -188,6 +203,7 @@ select.custom-dropdown-menu {
     text-align: center;
     padding-top: .1em;
     font-size: 14px;
+    color: #fff;
 }
 
 .cmn-wrapper ul {
@@ -392,3 +408,151 @@ align-items: center;
 #Inventory > table > tbody> tr > td {
     border: none;
 }
+
+/*
+ * Filter Search Box Styling
+ */
+
+input {
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 80%;
+}
+
+/*
+ * Staff Directory Widget Styling
+ */
+
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+#staffDirFilter {
+  display: none;
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+#staffDirInput {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+#staffDirectoryObject h2 {
+  margin-block-start: unset;
+}
+
+#staffDirectoryObject > h3 {
+  font-weight: bold;
+  margin-block: unset;
+}
+
+#libDirTable {
+  margin-block-start: 0.83em;
+  margin-bottom: 0;
+}
+
+table#libDirTable {
+  border-top: 1px solid #ddd;
+}
+
+#staffDirTable {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+  border: none;
+  font-size: 1.25em;
+}
+
+#staffDirTable h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-block: unset;
+}
+
+#staffDirTable td {
+  text-align: left;
+  padding: 12px;
+  border: none;
+}
+
+#staffDirTable tr.header, #staffDirTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/*
+ * Departmental Contacts Widget Styling
+ */
+
+.two.columns{
+width:13.3333333333%
+}
+
+.five.columns{
+width:38.3333333333%
+}
+
+.six.columns{
+width:48%
+}
+
+.key {
+    text-align: right;
+}
+
+#libDirectoryObject h3 {
+  margin-block-start: unset;
+}
+
+#libDirectoryObject {
+  margin-block-start: 0.83em;
+  margin-bottom: 0;
+}
+
+#libDirectoryObject {
+  border-top: 1px solid #ddd;
+}
+
+#libDirectoryObject {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+  border: none;
+  font-size: 1.25em;
+}
+
+#libDirectoryObject h3 {
+  font-weight: bold;
+  margin-block: unset;
+}
+
+/*
+ * Get Help Widget Styling
+ */
+
+#Filter {
+  display: none;
+}
+
+#faqContainer > div > a {
+    font-size: 1.25em;
+}
+
