@@ -31,7 +31,7 @@ jQuery(document).ready(function () {
                 jQuery('.cal-openThroughClose').text(elyLibraryHours.rendered);
                 jQuery('.cal-timeWrapper').show();
                 jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
-                jQuery('.ref-timeWr"cmn-subMenuapper').show();
+                jQuery('.ref-timeWrapper').show();
             }
             else if (refIsOpenToday) {
                 jQuery('.ref-openThroughClose').text(elyReferenceHours.rendered);
