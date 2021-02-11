@@ -510,12 +510,30 @@ width:13.3333333333%
 width:38.3333333333%
 }
 
-.six.columns{
-width:48%
+.eighty.columns{
+width:80%
+}
+
+#libDirectoryObject > div.six.columns.pull-right > div {
+  text-align:left;
+}
+
+.section {
+  margin-right: 50px;
 }
 
 .key {
-    text-align: right;
+  display: inline-block;
+  width: 40%;
+  text-align:right;
+  padding-right: 10px;
+}
+
+.value {
+   display: inline-block;
+   float: right;
+   width: 60%;
+
 }
 
 #libDirectoryObject h3 {
