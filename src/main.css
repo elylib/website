@@ -574,3 +574,21 @@ width:80%
     font-size: 1.25em;
 }
 
+/*
+ * Reserve a Room button
+ */
+
+.btn-reserve-custom {
+    background: grey;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.btn-reserve-custom:hover {
+    background: grey;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: underline;
+}
